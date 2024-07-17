@@ -62,14 +62,11 @@
             background-repeat: no-repeat;
             background-size :100% 100%;
             padding: 12px 20px; 
+            height:38.5rem;
         }
-        h1{
-            font-size: 85px;
-            margin: auto;
-            height: 50vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        img{
+            margin-top: 2.7%;
+            margin-bottom: 1%;
         }
         img:hover{
             -webkit-transform: scale(1.1);
@@ -77,26 +74,52 @@
             -webkit-transition: .3s ease-in-out;
             transition: .3s ease-in-out;
         }
+        .hoVer:hover{
+            -webkit-transform: scale(1.1);
+            transform: scale(1.3);
+            -webkit-transition: .3s ease-in-out;
+            transition: .3s ease-in-out;
+        }
+        .card{
+            width: 60vh;
+            height: 70vh;
+            border-radius: 15%;
+            background-color: rgba(0, 0, 0, 0);
+            box-shadow: 
+                0 5px 9px 0 rgba(0, 0, 0, 0.2), 
+                0 6px 20px 0 rgba(0, 0, 0, 0.20);
+        }
     </style>
 </head>
 <body>
     <div class="wrapper">
-    <header>
-        <center><img src="doc/love.png" width="50" height="50" alt="flume">
-        <h4 style="font-family: silkscreen, sans-serif;font-size:35px">Floom</h4></center>
-    </header>
     <div class="po">
         <center>
-            <h1 class="text"><b>𝒽i!! ⨍i❀re!! ✶</b></h1>
-            <h3>your personal diary :3</h3>
-            <p style="font-family: 'Courier New', Courier, monospace;"><b>by sasa.</b></p>
+            <img src="doc/boww.png" width="80" alt="">
+            <div class="card">
+                <div class="card-body">
+                    <form action="log/enlog.php" method="post">
+                        <div class="d-flex mt-3">
+                            <h3 class="fw-bold">&emsp;&emsp;&emsp;&ensp;⨍l❀𝒢in ౨ৎ</h3>
+                        </div>
+                        <hr class="divider">
+                        <div class="col mt-2 mb-3" style="font-family:'Courier New', Courier, monospace;">
+                            <label for="form-label" class="fw-bold mb-1">Username</label>
+                            <input type="text" name="usn" class="form-control rounded-3" placeholder="000000" required>
+                        </div>
+                        <div class="col mt-2 mb-3" style="font-family:'Courier New', Courier, monospace;">
+                            <label for="form-label" class="fw-bold mb-1">Passwword</label>
+                            <input type="password" name="password" class="form-control rounded-3" placeholder="*****" required> 
+                        </div><br>
+                        <div class="mt-3 d-flex" style="margin-left: 15%;margin-right:15%">
+                            <a href="homePage.php" class="hoVer btn btn text-center fw-bold shadow" style="width:100px;background-color:#F6E6CB;border-radius:12px">Nuh uh</a>&emsp;
+                            <button type="submit" class="hoVer btn btn text-center fw-bold shadow" style="width:100px;background-color:#FF5580;color:white;border-radius:12px">oK :3</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </center>
     </div>
-    <footer id="footer">
-        <center>
-            <a href="login.php"><img src="doc/star.png" width="60" height="60" alt=""></a>
-        </center>
-    </footer>
     </div>
 </body>
 </html>
