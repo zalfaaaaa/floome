@@ -13,30 +13,11 @@
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <title>floomsa</title>
     <style>
-        @media (min-width: 360px) {
-            :root {
-                --scale: 0.8;
-            }
-        }
-
-        @media (min-width: 768px) {
-            :root {
-                --scale: 1;
-            }
-        }   
-
-        @media (min-width: 1024px) {
-            :root {
-                --scale: 1.2;
-            }
-        }
-
         *{
             padding: 0;
             margin: 0;
             box-sizing: border-box;
         }
-
         html{
             height: 100%;
             box-sizing: border-box;
@@ -53,7 +34,7 @@
         header{
             background-color: white;
             box-shadow: 
-                15px 15px 15px rgba(0, 0, 0, 0.1)
+                10px 10px rgba(0, 0, 0, 0.1)
         }
         #footer{
             margin-top: auto;
@@ -82,77 +63,46 @@
             background-size :100% 100%;
             padding: 12px 20px; 
         }
-        a{
-            text-decoration: none;
-            color: black;
-            font-family: silkscreen, sans-serif ;
-        }
-        .col{
-            margin-top: 20px;
-        }
-        .col:hover{
-            -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-            -webkit-transition: .3s ease-in-out;
-            transition: .3s ease-in-out;
-        }
-        #image:hover{
+        img:hover{
             -webkit-transform: scale(1.1);
             transform: scale(1.3);
             -webkit-transition: .3s ease-in-out;
             transition: .3s ease-in-out;
         }
-        .link{
-            color: black;
+        .card{
+            padding: 16px;
+            width: 152vh;
+            height: 99vh;
+            border-radius: 2%;
+            background: linear-gradient(pink, white, pink);
+            box-shadow: 
+                0 5px 9px 0 rgba(0, 0, 0, 0.2), 
+                0 6px 20px 0 rgba(0, 0, 0, 0.20);
         }
-        .link:hover{
-            color: #91DDCF;
+        .container{
+            margin-top: 5%;
+            margin-bottom: 5%;
+            margin-left: 15%;
+            margin-right: 20%;
         }
     </style>
 </head>
 <body>
     <div class="wrapper">
     <header>
-        <center><img src="doc/love.png" width="50" height="50" id="image" alt="flume">
+        <center><img src="doc/love.png" width="50" height="50" alt="flume">
         <h4 style="font-family: silkscreen, sans-serif;font-size:35px">Floom</h4></center>
     </header>
-    <!-- content  -->
     <div class="po">
-        <div class="container container-fluid text-center">
-            <div class="row">
-                <div class="col">
-                    <a href="idc.php" class="link"><img src="doc/idc.png" class="imG" width="180" height="180" alt="">
-                    <center>id card</a></center>
-                </div>
-                <div class="col">
-                    <a href="diary.php" class="link"><img src="doc/comic.png" class="imG" width="180" height="180" alt="">
-                    <center>diary</a></center>
-                </div>
-                <!-- <div class="col mt-3">
-                    <img src="doc/mushroomHouse.png" class="imG" width="180" height="180" alt="">
-                    <center><a href="hangout.php">hangout</a></center>
-                </div> -->
+        <div class="container">
+            <div class="card">
+                <b><h1 style="font-family: silkscreen, sans-serif;"><img src="doc/boww.png" width="80" alt="" style="transform: rotate(-20deg);">&emsp;Identity C⚝rd ༄   ༘   .ೃ࿔   ࿐ ࿔ ₊˚ 𓂃˖𝜗𝜚 </h1></b>
             </div>
-            <div class="row">
-                <div class="col">
-                    <a href="cam.php" class="link"><img src="doc/cam.png" class="imG" width="180" height="180" alt="">
-                    <center>picture :3</a></center>
-                </div>
-                <div class="col">
-                    <a href="cal.php" class="link"><img src="doc//cal.png" class="imG" width="180" height="180" alt="">
-                    <center>calender</a></center>
-                </div>
-                <!-- <div class="col mt-3">
-                    <img src="doc/mushroomHouse.png" class="imG" width="180" height="180" alt="">
-                    <center><a href="hangout.php">hangout</a></center>
-                </div> -->
-            </div><br>
         </div>
     </div>
-    <!-- end content  -->
     <footer id="footer">
         <center>
-            <a href="menu.php"><img src="doc/star.png" width="60" height="60" id="image" alt="star"></a>&emsp;
+            <a href="menu.php"><img src="doc/star.png" width="60" height="60" alt=""></a>
         </center>
     </footer>
     </div>
