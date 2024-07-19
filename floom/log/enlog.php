@@ -5,11 +5,11 @@ session_start();
 include('connect.php');
 
 $id = $_POST['id'];
-$nm = $_POST['Name'];
-$usn = $_POST['Username'];
-$pw = $_POST['Password'];
+$nm = $_POST['name'];
+$usn = $_POST['username'];
+$pw = $_POST['password'];
 
-$query = $maru->query("INSERT INTO `account`(`id`, `Name`, `Username`, `Password`) VALUES ('$id','$nm','$usn','$pw')");
+$query = $hiu->query("INSERT INTO `account`(`id`, `name`, `username`, `password`) VALUES ('$id','$nm','$usn','$pw')");
 $data = $query->fetchAll();
 
 if($query){

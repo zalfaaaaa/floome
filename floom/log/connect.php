@@ -1,3 +1,3 @@
 <?php
 
-$maru = new PDO('mysql:host=localhost;dbname=floom','root','');
+$hiu = new PDO('mysql:host=localhost;dbname=floom','root','');

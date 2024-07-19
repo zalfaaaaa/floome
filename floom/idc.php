@@ -1,3 +1,11 @@
+<?php
+
+session_start();
+
+include('log/connect.php');
+$query = $hiu->query('SELECT * FROM `account`')->fetchAll();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,7 +71,7 @@
             background-size :100% 100%;
             padding: 12px 20px; 
         }
-        img:hover{
+        #photo:hover{
             -webkit-transform: scale(1.1);
             transform: scale(1.3);
             -webkit-transition: .3s ease-in-out;
@@ -85,24 +93,56 @@
             margin-left: 15%;
             margin-right: 20%;
         }
+        #pict{
+            filter: grayscale(25%);
+            filter: hue-rotate(-6.5deg);
+            box-shadow: 
+                0 5px 9px 0 rgba(0, 0, 0, 0.2), 
+                0 6px 20px 0 rgba(0, 0, 0, 0.20);
+            border: 10px dotted #FF407D;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            margin-right: 2%;
+        }
+        h2{
+            font-weight: bolder;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .box{
+            margin-top: 4%;
+            margin-bottom: 4%;
+            margin-left: 2%;
+        }
+        p{
+            font-family:'Times New Roman', Times, serif;
+        }
     </style>
 </head>
 <body>
     <div class="wrapper">
     <header>
-        <center><img src="doc/love.png" width="50" height="50" alt="flume">
+        <center><img src="doc/love.png" id="photo" width="50" height="50" alt="flume">
         <h4 style="font-family: silkscreen, sans-serif;font-size:35px">Floom</h4></center>
     </header>
     <div class="po">
         <div class="container">
             <div class="card">
-                <b><h1 style="font-family: silkscreen, sans-serif;"><img src="doc/boww.png" width="80" alt="" style="transform: rotate(-20deg);">&emsp;Identity C⚝rd ༄   ༘   .ೃ࿔   ࿐ ࿔ ₊˚ 𓂃˖𝜗𝜚 </h1></b>
+                <b><h1 style="font-family: silkscreen, sans-serif;"><img src="doc/boww.png" width="80" alt="" id="photo" style="transform: rotate(-20deg);">&emsp;Identity C⚝rd ༄   ༘   .ೃ࿔   ࿐ ࿔ ₊˚ 𓂃˖𝜗𝜚 </h1></b>
+                <div class="foto" style="">
+                    <img src="doc/zalfa.jpeg" align="right" width="270" height="360" alt="pas photo" id="pict">
+                    <div class="box">
+                        <h2>Personal Data</h2>
+                        <p>Name : <?=$query['name']?></p>
+                        <p>Username : <?=$query['username']?></p>
+                        <p>Password : <?=$query['password']?></p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <footer id="footer">
         <center>
-            <a href="menu.php"><img src="doc/star.png" width="60" height="60" alt=""></a>
+            <a href="menu.php"><img src="doc/star.png" width="60" height="60" alt="" ></a>
         </center>
     </footer>
     </div>
